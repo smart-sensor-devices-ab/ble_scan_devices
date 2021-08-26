@@ -1,0 +1,16 @@
+{
+  
+    "scripts": {
+      "dev": "parcel index.html",
+      "build": "parcel build index.html"
+    },
+  
+  "dependencies": {
+    "bleuio": "^1.0.8"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.8",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.3.6"
+  }
+}
