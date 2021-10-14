@@ -35,7 +35,7 @@ document.getElementById('findscandata').addEventListener('click', function(){
   var table = document.getElementById('outputTable');
   var tr=''
   table.innerHTML = tr;
-my_dongle.at_findscandata('',1200).then((data)=>{
+my_dongle.at_findscandata('',2000).then((data)=>{
   //console.log(data)
   let advData=[]
   data.map(x=>{
