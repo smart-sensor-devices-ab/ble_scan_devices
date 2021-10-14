@@ -35,7 +35,7 @@ document.getElementById('findscandata').addEventListener('click', function(){
   var table = document.getElementById('outputTable');
   var tr=''
   table.innerHTML = tr;
-my_dongle.at_findscandata('',1000).then((data)=>{
+my_dongle.at_findscandata('',1200).then((data)=>{
   //console.log(data)
   let advData=[]
   data.map(x=>{
@@ -96,6 +96,12 @@ const getID = (data)=>{
           id:x.id,
           company:y.Company
           })
+          }else if(x.identifier==='-'){
+            b.push({
+              adv:x.adv,
+              id:x.id,
+              company:'Unknown'
+              })
           }
         })
        })

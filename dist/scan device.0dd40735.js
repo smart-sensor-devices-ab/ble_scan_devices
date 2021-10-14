@@ -11734,7 +11734,7 @@ document.getElementById('findscandata').addEventListener('click', function () {
   var table = document.getElementById('outputTable');
   var tr = '';
   table.innerHTML = tr;
-  my_dongle.at_findscandata('', 1000).then(function (data) {
+  my_dongle.at_findscandata('', 1200).then(function (data) {
     //console.log(data)
     var advData = [];
     data.map(function (x) {
@@ -11792,6 +11792,12 @@ var filterByReference = function filterByReference(arr1, arr2) {
           id: x.id,
           company: y.Company
         });
+      } else if (x.identifier === '-') {
+        b.push({
+          adv: x.adv,
+          id: x.id,
+          company: 'Unknown'
+        });
       }
     });
   });
@@ -11804,4 +11810,4 @@ var filterByReference = function filterByReference(arr1, arr2) {
   return filtered;
 }; //let r = filterByReference(ar1,ar2)
 },{"bleuio":"okjw","./companydata":"b1k9"}]},{},["Focm"], null)
-//# sourceMappingURL=/scan%20device.7ee0ebfa.js.map
+//# sourceMappingURL=/scan%20device.0dd40735.js.map
